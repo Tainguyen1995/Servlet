@@ -49,10 +49,12 @@ public class ServletLogin extends HttpServlet {
 		if(ur.equalsIgnoreCase("tai") && passw.equalsIgnoreCase("123"))
 		{
 			HttpSession session = request.getSession();
-			session.setMaxInactiveInterval(10);
 			session.setAttribute("username",ur);
-            RequestDispatcher disptcher =request.getRequestDispatcher("Trangchu.jsp");
-            disptcher.forward(request, response);
+			session.setMaxInactiveInterval(10);
+			
+			response.sendRedirect("Trangchu.jsp");
+          /*  RequestDispatcher disptcher =request.getRequestDispatcher("Trangchu.jsp");
+            disptcher.forward(request, response);*/
 		}
 		else {
 			RequestDispatcher rd = request.getRequestDispatcher("index.jsp");

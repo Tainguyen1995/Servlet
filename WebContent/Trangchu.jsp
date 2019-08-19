@@ -8,5 +8,12 @@
 </head>
 <body>
         <h1>login thanh cong voi user: ${username}</h1>
+        <form action="ChangPassword" method="post">
+          <input type="submit" name="Doipass" value="Change Pass">
+        </form>
+        <form action="Logout" method="post">
+         <input type="submit" name="DangXuat" value="Log Out">
+        </form>
+        
 </body>
 </html>
